@@ -85,4 +85,4 @@ Once your pull request is approved, it will be merged into the master branch and
 The cv-generator-service is licensed under the MIT license. See the LICENSE file for more details.
 
 ## Contact
-If you have any questions or feedback, please contact us at 
+If you have any questions or feedback, please contact us at Jacob.cossette@ens.etsmtl.ca
