@@ -1,4 +1,6 @@
-type matcher_responses struct {
+package structure
+
+type Matcher_responses struct {
 	UserID        string            `json:"user_id"`
 	JobID         string            `json:"job_id"`
 	MatchedSkills []string          `json:"matched_skills"`

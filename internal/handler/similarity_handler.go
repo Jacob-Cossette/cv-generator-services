@@ -1,6 +1,15 @@
+package handler
+
+import (
+	"fmt"
+	"net/http"
+
+	"github.com/jacob-cossette/cv-generator-services/internal/structure"
+)
+
 type SimilarityHandler struct {
-	Job  *Job
-	User *User
+	Job  structure.Job_offer
+	User structure.User
 }
 
 func (h *SimilarityHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -9,12 +18,12 @@ func (h *SimilarityHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func (h *SimilarityHandler) calculateSimilarity() float64 {
 	similarity := 0.0
-	for _, userSkill := range h.User.Skillset {
-		for _, jobSkill := range h.Job.Skillset {
+	for _, userSkill := range h.User.Skills {
+		for _, jobSkill := range h.Job.Skills {
 			if userSkill == jobSkill {
 				similarity += 1.0
 			}
 		}
 	}
-	return similarity / float64(len(h.User.Skillset))
+	return similarity / float64(len(h.User.Skills))
 }
