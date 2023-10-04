@@ -9,7 +9,7 @@ import (
 
 type SimilarityHandler struct {
 	Job  structure.Job_offer
-	User structure.User
+	User structure.Profil
 }
 
 func (h *SimilarityHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
