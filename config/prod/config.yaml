@@ -1,0 +1,7 @@
+port: "{$port}"
+database:
+  host: "https//a6lab.internal.{$port}.com"
+  port: "{$portdb}"
+  username: "{$username}"
+  password: "{$password}"
+  name: "{$namedb}"
