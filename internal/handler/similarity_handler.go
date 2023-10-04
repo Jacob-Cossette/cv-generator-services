@@ -13,10 +13,10 @@ type SimilarityHandler struct {
 }
 
 func (h *SimilarityHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "The similarity between the user and the job is %f", h.calculateSimilarity())
+	fmt.Fprintf(w, "The similarity between the user and the job is %f", h.CalculateSimilarity())
 }
 
-func (h *SimilarityHandler) calculateSimilarity() float64 {
+func (h *SimilarityHandler) CalculateSimilarity() float64 {
 	similarity := 0.0
 	for _, userSkill := range h.User.Skills {
 		for _, jobSkill := range h.Job.Skills {

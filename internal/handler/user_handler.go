@@ -3,12 +3,14 @@ package handler
 import (
 	//"net/http"
 
+	"net/http"
+
 	"github.com/gin-gonic/gin"
 	"github.com/jacob-cossette/cv-generator-services/internal/structure"
 )
 
-func getSkills(c *gin.Context) {
-	//c.IndentedJson(http.StatusOK, skills)
+func GetSkills(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, Skills)
 }
 
 var Skills = []structure.Skill{
